@@ -7,7 +7,6 @@ repository: https://github.com/chris-rutkowski/optimal_wrap_text
 topics:
   - text
   - wrapping
-  - layout
   - ui
   - readability
   - responsive

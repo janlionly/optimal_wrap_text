@@ -2,7 +2,8 @@
 
 A Flutter Text replacement that wraps short multi-line text over similarly sized lines for better visual balance.
 
-![Before and After Comparison](readme_assets/before_after_commingle.jpeg)
+![Before and After Comparison](https://raw.githubusercontent.com/chris-rutkowski/optimal_wrap_text/main/readme_assets/before_after_commingle.jpeg)
+
 
 ## ✨ Features
 

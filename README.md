@@ -2,18 +2,6 @@
 
 A Flutter Text replacement that wraps short multi-line text over similarly sized lines for better visual balance.
 
-![Before and After Comparison](https://raw.githubusercontent.com/chris-rutkowski/optimal_wrap_text/main/readme_assets/before_after_commingle.jpeg)
-
-
-## ✨ Features
-
-- Drop-in replacement for the `Text` widget
-- Supports all `Text` attributes, including `style`, `textDirection` (RTL), `textHeightBehavior`…
-- Automatically finds optimal line breaks — no more manual `\n`
-- Adjusts to different screen sizes and text scaling
-
-## 📐 Why?
-
 Instead of awkward standard line breaks like these:
 
 ```
@@ -35,6 +23,15 @@ will span 2 or 3 lines
 ```
 
 Perfect for small, informative footnotes or short multi-line messages that deserve to look good.
+
+![Before and After Comparison](https://raw.githubusercontent.com/chris-rutkowski/optimal_wrap_text/main/readme_assets/before_after_commingle.jpeg)
+
+## ✨ Features
+
+- Drop-in replacement for the `Text` widget
+- Supports all `Text` attributes, including `style`, `textDirection` (RTL), `textHeightBehavior`…
+- Automatically finds optimal line breaks — no more manual `\n`
+- Adjusts to different screen sizes and text scaling
 
 ## 🚀 Getting started
 

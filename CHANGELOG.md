@@ -1,3 +1,9 @@
+## 1.0.3
+Corrects widget alignment
+Golden tests
+Trivial example app (just main.dart)
+README rearrangement
+
 ## 1.0.2
 Docs and formatting updated.
 

@@ -40,7 +40,7 @@ Add `optimal_wrap_text` to your `pubspec.yaml`:
 ```yaml
 dependencies:
   ...
-  optimal_wrap_text: ^1.0.0
+  optimal_wrap_text: ^1.0.3
   ...
 ```
 

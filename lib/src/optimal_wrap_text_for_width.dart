@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:optimal_wrap_text/src/utils/text_align_to_alignment.dart';
 
 import 'utils/find_optimal_text_painter_width.dart';
 
@@ -37,6 +38,9 @@ final class OptimalWrapTextForWidth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final defaultStyle = DefaultTextStyle.of(context);
+    final effectiveTextAlign =
+        textAlign ?? defaultStyle.textAlign ?? TextAlign.start;
+    final effectiveTextDirection = textDirection ?? Directionality.of(context);
 
     final painter = TextPainter(
       text: TextSpan(text: text, style: defaultStyle.style.merge(style)),
@@ -53,21 +57,24 @@ final class OptimalWrapTextForWidth extends StatelessWidget {
     final optimalWidth = findOptimalTextPainterWidth(painter);
     painter.dispose();
 
-    return SizedBox(
-      width: optimalWidth,
-      child: Text(
-        text,
-        style: style,
-        strutStyle: strutStyle,
-        textAlign: textAlign,
-        textDirection: textDirection,
-        locale: locale,
-        softWrap: softWrap,
-        textScaler: textScaler,
-        semanticsLabel: semanticsLabel,
-        textWidthBasis: textWidthBasis,
-        textHeightBehavior: textHeightBehavior,
-        selectionColor: selectionColor,
+    return Align(
+      alignment: effectiveTextAlign.toAlignment(effectiveTextDirection),
+      child: SizedBox(
+        width: optimalWidth,
+        child: Text(
+          text,
+          style: style,
+          strutStyle: strutStyle,
+          textAlign: textAlign,
+          textDirection: textDirection,
+          locale: locale,
+          softWrap: softWrap,
+          textScaler: textScaler,
+          semanticsLabel: semanticsLabel,
+          textWidthBasis: textWidthBasis,
+          textHeightBehavior: textHeightBehavior,
+          selectionColor: selectionColor,
+        ),
       ),
     );
   }

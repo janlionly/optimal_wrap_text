@@ -4,7 +4,7 @@ A Flutter Text replacement that wraps short multi-line text over similarly sized
 
 Instead of awkward standard line breaks like these:
 
-```
+```text
 My slightly longer text that will span 2 or
 3 lines
 
@@ -14,7 +14,7 @@ My slightly longer text that will span 2 or
 
 You get cleaner, balanced output like these:
 
-```
+```text
 My slightly longer text that 
 will span 2 or 3 lines
 
@@ -40,7 +40,7 @@ Add `optimal_wrap_text` to your `pubspec.yaml`:
 ```yaml
 dependencies:
   ...
-  optimal_wrap_text: ^1.0.3
+  optimal_wrap_text: ^1.0.4
   ...
 ```
 
@@ -88,8 +88,8 @@ OptimalWrapText(
 2. It runs a binary search to find the narrowest width that still fits in the same number of lines — ensuring optimal wrapping.
 
    e.g. 
-   ```
-   300px → 2 lines
+   ```text
+   300px → 2 lines (width from the current BuildContext)
    150px → 4 lines ❌
    225px → 2 lines ✅
    188px → 3 lines ❌

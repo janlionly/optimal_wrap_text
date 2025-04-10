@@ -1,3 +1,6 @@
+## 1.0.5
+Fixes absent DefaultTextHeightBehavior in widget tree throwing an exception.
+
 ## 1.0.4
 README improvement
 

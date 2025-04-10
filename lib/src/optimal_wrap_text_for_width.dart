@@ -51,7 +51,7 @@ final class OptimalWrapTextForWidth extends StatelessWidget {
       locale: locale,
       textWidthBasis: textWidthBasis ?? TextWidthBasis.parent,
       textHeightBehavior:
-          textHeightBehavior ?? DefaultTextHeightBehavior.of(context),
+          textHeightBehavior ?? DefaultTextHeightBehavior.maybeOf(context),
     )..layout(maxWidth: width);
 
     final optimalWidth = findOptimalTextPainterWidth(painter);

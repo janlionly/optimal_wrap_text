@@ -1,10 +1,8 @@
 {
-    "dart.lineLength": 80,
-    "cSpell.words": [
-        "analyse",
-        "buildlog",
-        "pubspec",
-        "Roboto",
-        "Rutkowski"
-    ]
+  "dart.lineLength": 80,
+  "cSpell.words": ["analyse", "buildlog", "pubspec", "Roboto", "Rutkowski"],
+  "flutterTools.displayGetxContextMenu": false,
+  "flutterTools.displayMobxContextMenu": false,
+  "flutterTools.displayRiverpodContextMenu": false,
+  "flutterTools.displayModularContextMenu": false
 }

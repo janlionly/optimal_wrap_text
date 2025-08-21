@@ -3,7 +3,7 @@ import 'package:optimal_wrap_text/src/utils/text_align_to_alignment.dart';
 
 import 'utils/find_optimal_text_painter_width.dart';
 
-final class OptimalWrapTextForWidth extends StatelessWidget {
+class OptimalWrapTextForWidth extends StatelessWidget {
   final double width;
   final String text;
   final TextStyle? style;
@@ -12,7 +12,7 @@ final class OptimalWrapTextForWidth extends StatelessWidget {
   final TextDirection? textDirection;
   final Locale? locale;
   final bool? softWrap;
-  final TextScaler? textScaler;
+  final double? textScaleFactor;
   final String? semanticsLabel;
   final TextWidthBasis? textWidthBasis;
   final TextHeightBehavior? textHeightBehavior;
@@ -28,7 +28,7 @@ final class OptimalWrapTextForWidth extends StatelessWidget {
     this.textDirection,
     this.locale,
     this.softWrap,
-    this.textScaler,
+    this.textScaleFactor,
     this.semanticsLabel,
     this.textWidthBasis,
     this.textHeightBehavior,
@@ -47,7 +47,7 @@ final class OptimalWrapTextForWidth extends StatelessWidget {
       textDirection: textDirection ?? Directionality.of(context),
       textAlign: textAlign ?? defaultStyle.textAlign ?? TextAlign.start,
       strutStyle: strutStyle,
-      textScaler: textScaler ?? MediaQuery.textScalerOf(context),
+      textScaleFactor: textScaleFactor ?? MediaQuery.maybeOf(context)?.textScaleFactor ?? 1.0,
       locale: locale,
       textWidthBasis: textWidthBasis ?? TextWidthBasis.parent,
       textHeightBehavior:
@@ -69,7 +69,7 @@ final class OptimalWrapTextForWidth extends StatelessWidget {
           textDirection: textDirection,
           locale: locale,
           softWrap: softWrap,
-          textScaler: textScaler,
+          textScaleFactor: textScaleFactor,
           semanticsLabel: semanticsLabel,
           textWidthBasis: textWidthBasis,
           textHeightBehavior: textHeightBehavior,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'optimal_wrap_text_for_width.dart';
 
 /// A widget that wraps text optimally.
-final class OptimalWrapText extends StatelessWidget {
+class OptimalWrapText extends StatelessWidget {
   /// Provide the width for edge cases where LayoutBuilder cannot be used.
   /// Such as inside SliverFillRemaining
   final double? width;
@@ -30,7 +30,7 @@ final class OptimalWrapText extends StatelessWidget {
   final bool? softWrap;
 
   /// See equivalent property in [Text]
-  final TextScaler? textScaler;
+  final double? textScaleFactor;
 
   /// See equivalent property in [Text]
   final String? semanticsLabel;
@@ -55,7 +55,7 @@ final class OptimalWrapText extends StatelessWidget {
     this.textDirection,
     this.locale,
     this.softWrap,
-    this.textScaler,
+    this.textScaleFactor,
     this.semanticsLabel,
     this.textWidthBasis,
     this.textHeightBehavior,
@@ -74,7 +74,7 @@ final class OptimalWrapText extends StatelessWidget {
         textDirection: textDirection,
         locale: locale,
         softWrap: softWrap,
-        textScaler: textScaler,
+        textScaleFactor: textScaleFactor,
         semanticsLabel: semanticsLabel,
         textWidthBasis: textWidthBasis,
         textHeightBehavior: textHeightBehavior,
@@ -93,7 +93,7 @@ final class OptimalWrapText extends StatelessWidget {
           textDirection: textDirection,
           locale: locale,
           softWrap: softWrap,
-          textScaler: textScaler,
+          textScaleFactor: textScaleFactor,
           semanticsLabel: semanticsLabel,
           textWidthBasis: textWidthBasis,
           textHeightBehavior: textHeightBehavior,

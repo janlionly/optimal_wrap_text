@@ -106,7 +106,7 @@ void main() {
   });
 }
 
-final class Wrapper extends StatelessWidget {
+class Wrapper extends StatelessWidget {
   final String text;
   final TextStyle style;
   final TextAlign textAlign;

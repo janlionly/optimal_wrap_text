@@ -7,21 +7,21 @@ repository: https://github.com/chris-rutkowski/optimal_wrap_text
 topics:
   - text
   - wrapping
-  - ui
-  - readability
+  - user-interface
   - responsive
 
 environment:
-  sdk: ">=3.7.0 <4.0.0"
-  flutter: ">=3.29.0"
+  sdk: ">=2.19.0 <4.0.0"
+  flutter: ">=3.7.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  flutter_lints: ^5.0.0
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
 
 flutter:
+  uses-material-design: true
